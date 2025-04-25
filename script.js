@@ -17,10 +17,10 @@ function enviarFormulario () {
     const mensagem = textareaMensagem.value
 
     const pontos = calcularPontuacao()
-    const resultado = pontos >= 11 ? '✅ **Passou**' : '❌ **Reprovado**'
+    const resultado = pontos >= 11 ? '✅ Passou' : '❌ Reprovado'
 
     const dados = prepararDados(nome, telefone, mensagem, pontos, resultado)
-    enviarParaDiscord(dados)
+    enviarParaDiscord(dados, resultado)
 }
 
 /* ---- Aux Functions ---- */
@@ -28,11 +28,11 @@ function enviarFormulario () {
 function calcularPontuacao () {
     let pontos = 0
 
-    // Pega todos os radios com value="sim" que estão marcados
+    // Contar radios marcados como "sim"
     const radiosSim = document.querySelectorAll('input[type="radio"][value="sim"]:checked')
     pontos += radiosSim.length
 
-    // Pega todos os checkboxes marcados dos códigos Q
+    // Contar checkboxes marcados dos códigos Q
     const checkboxes = document.querySelectorAll('input[type="checkbox"][name="codigosQ"]:checked')
     pontos += checkboxes.length
 
@@ -64,7 +64,7 @@ ${mensagem}
     return JSON.stringify(dados)
 }
 
-function enviarParaDiscord (dados) {
+function enviarParaDiscord (dados, resultado) {
     const url = 'https://discord.com/api/webhooks/1364291804807168190/5ro9OtD4C8xDShEXszLXtO5Ywd3mjlf82vhiHOc9gIIyekeuxH7AVEmHxVuiXcnqkbLD'
     const config = {
         method: 'POST',
@@ -73,12 +73,20 @@ function enviarParaDiscord (dados) {
     }
 
     window.fetch(url, config)
-        .then(limparCampos)
+        .then(() => limparCampos(resultado))
         .catch(error => console.log(error.message))
 }
 
-function limparCampos () {
+function limparCampos (resultado) {
     inputNome.value = ''
     inputTelefone.value = ''
     textareaMensagem.value = ''
+
+    const radios = document.querySelectorAll('input[type="radio"]:checked')
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked')
+
+    radios.forEach(radio => radio.checked = false)
+    checkboxes.forEach(checkbox => checkbox.checked = false)
+
+    alert(`Formulário enviado!\nResultado: ${resultado}`)
 }
