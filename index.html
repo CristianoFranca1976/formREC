@@ -1,77 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="shortcut icon" href="/assets/policia-civil-sp-1.svg" type="image/x-icon" />
-  <title>Formulario REC - Policia Civil</title>
-</head>
-<body>
-  <div class="formulario">
-    <img title="logo" src="./assets/policia-civil-sp-1.svg" />
-    <h2>Formulário > Recrutamento</h2>
-    <p>
-      Preencha corretamente e será enviado o resultado para a aba
-      <a href="https://discord.com/channels/1340853864630452236/1364136990332682241">
-        <img src="/assets/link.png" alt="link" style="width: 24px; margin-left: 5px;" />
-      </a>
-    </p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Cristiano" />
+    <meta name="robots" content="index, follow" />
+    <meta name="description" content="Formulario de Recrutador" />
+    <meta name="keyword" content="Recrutador, RP, Five M, GTA5" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="/assets/policia-civil-sp-1.svg"
+      type="image/x-icon"
+    />
+    <title>Formulario REC - Policia Civil</title>
+  </head>
+  <body>
+    <div class="formulario">
+      <img title="logo" src="./assets/policia-civil-sp-1.svg" />
+      <h2>Formulário > Recrutamento</h2>
+      <p>
+        Preencha corretamente e será enviado o resultado para a aba
+        <a
+          href="https://discord.com/channels/1340853864630452236/1364136990332682241"
+        >
+          <img
+            src="/assets/link.png"
+            alt="link"
+            style="width: 32px; margin-left: 5px"
+            class="link-logo"
+          />
+        </a>
+      </p>
 
-    <input type="text" placeholder="QRA Conscrito" id="nome" required />
-    <input type="text" placeholder="ID Conscrito" id="telefone" required/>
+      <input type="text" placeholder="QRA Conscrito" id="nome" class="inp" required />
+      <input type="text" placeholder="ID Conscrito" id="telefone" class="inp" required />
 
-    <div class="aba">
-      <p>Quais os códigos Q mais utilizados?</p>
-      <!-- Essa pergunta foi mantida com múltiplas opções, pois parece ser múltipla escolha -->
-      <label>QAP<input type="checkbox" name="codigosQ" value="QAP" /> </label>
-      <label>QSL<input type="checkbox" name="codigosQ" value="QSL" /> </label>
-      <label>TKS<input type="checkbox" name="codigosQ" value="TKS" /> </label>
-      <label>QTH<input type="checkbox" name="codigosQ" value="QTH" /> </label>
-      <label>QTI<input type="checkbox" name="codigosQ" value="QTI" /> </label>
-      <label>QRA<input type="checkbox" name="codigosQ" value="QRA" /> </label>
-      <label>QTA<input type="checkbox" name="codigosQ" value="QTA" /> </label>
-      <label>QSV<input type="checkbox" name="codigosQ" value="QSV" /> </label>
-      <label>QSM<input type="checkbox" name="codigosQ" value="QSM" /> </label>
-      <label>QRU<input type="checkbox" name="codigosQ" value="QRU" /> </label>
+      <div class="aba">
+        <p>Quais os códigos Q mais utilizados? </p>
+        <!-- Essa pergunta foi mantida com múltiplas opções, pois parece ser múltipla escolha -->
+
+        <label>QAP<input type="checkbox" name="codigosQ" value="QAP" class="check" /></label>
+        <label>QSL<input type="checkbox" name="codigosQ" value="QSL" class="check" /></label>
+        <label>TKS<input type="checkbox" name="codigosQ" value="TKS" class="check" /></label>
+        <label>QTH<input type="checkbox" name="codigosQ" value="QTH" class="check" /></label>
+        <label>QTI<input type="checkbox" name="codigosQ" value="QTI" class="check" /></label>
+        <label>QRA<input type="checkbox" name="codigosQ" value="QRA" class="check" /></label>
+        <label>QTA<input type="checkbox" name="codigosQ" value="QTA" class="check" /></label>
+        <label>QSV<input type="checkbox" name="codigosQ" value="QSV" class="check" /></label>
+        <label>QSM<input type="checkbox" name="codigosQ" value="QSM" class="check" /></label>
+        <label>QRU<input type="checkbox" name="codigosQ" value="QRU" class="check" /></label>
+        <footer>
+          1 ponto cada
+        </footer>
+      </div>
+
+      <div class="aba">
+        <p>Peça para o conscrito modular para você.</p>
+        <label>Sim<input type="radio" name="modular" value="sim" class="check"/> </label>
+        <label>Não<input type="radio" name="modular" value="nao" class="check"/> </label>
+        <footer>
+          1 ponto
+        </footer>
+      </div>
+
+      <div class="aba">
+        <p>O conscrito sabe a lei de Miranda?</p>
+        <label>Sim<input type="radio" name="miranda" value="sim" class="check" /> </label>
+        <label>Não<input type="radio" name="miranda" value="nao" class="check" /> </label>
+        <footer>
+          1 ponto
+        </footer>
+      </div>
+
+      <div class="aba">
+        <p>Posições na viatura, sabe como funciona?</p>
+        <label>Sim<input type="radio" name="viatura" value="sim" class="check" /> </label>
+        <label>Não<input type="radio" name="viatura" value="nao" class="check" /> </label>
+        <footer>
+          1 ponto
+        </footer>
+      </div>
+
+      <div class="aba">
+        <p>Códigos de patrulha, explique cada um.</p>
+        <label>Sim<input type="radio" name="patrulha" value="sim" class="check" /> </label>
+        <label>Não<input type="radio" name="patrulha" value="nao" class="check" /> </label>
+        <footer>
+          1 ponto
+        </footer>
+      </div>
+
+      <div class="aba">
+        <p>
+          O conscrito conhece o método da caixa assim como o sexo oposto?
+        </p>
+        <label>Sim<input type="radio" name="caixa" value="sim" class="check" /> </label>
+        <label>Não<input type="radio" name="caixa" value="nao" class="check" /> </label>
+        <footer>
+          1 ponto
+        </footer>
+      </div>
+
+      <input
+        type="text"
+        placeholder="QRA Recrutador"
+        id="recrutador"
+        class="inp"
+        required
+      />
+      <input
+        type="text"
+        placeholder="ID Recrutador"
+        id="recrutador-id"
+        class="inp"
+        required
+      />
+      <textarea
+        rows="4"
+        placeholder="Comentário"
+        id="mensagem"
+        required
+      ></textarea>
+      <button type="button" id="enviar">ENVIAR AGORA</button>
+      <div class="bot">
+        <img src="/assets/copyright-symbol.svg" alt="copyright" class="copyright">
+      <span>Copyright BY Cristiano Franca</span>
+     </div>
     </div>
-
-    <div class="aba">
-      <p>Peça para o conscrito modular para você.</p>
-      <label>Sim<input type="radio" name="modular" value="sim" /> </label>
-      <label>Não<input type="radio" name="modular" value="nao" /> </label>
-    </div>
-
-    <div class="aba">
-      <p>O conscrito sabe a lei de Miranda?</p>
-      <label>Sim<input type="radio" name="miranda" value="sim" /> </label>
-      <label>Não<input type="radio" name="miranda" value="nao" /> </label>
-    </div>
-
-    <div class="aba">
-      <p>Posições na viatura, sabe como funciona?</p>
-      <label>Sim<input type="radio" name="viatura" value="sim" /> </label>
-      <label>Não<input type="radio" name="viatura" value="nao" /> </label>
-    </div>
-
-    <div class="aba">
-      <p>Códigos de patrulha, explique cada um.</p>
-      <label>Sim<input type="radio" name="patrulha" value="sim" /> </label>
-      <label>Não<input type="radio" name="patrulha" value="nao" /> </label>
-    </div>
-
-    <div class="aba">
-      <p>O conscrito conhece o método da caixa assim como o sexo oposto?</p>
-      <label>Sim<input type="radio" name="caixa" value="sim" /> </label>
-      <label>Não<input type="radio" name="caixa" value="nao" /> </label>
-    </div>
-
-    <input type="text" placeholder="QRA Recrutador" id="recrutador" required/>
-    <input type="text" placeholder="ID Recrutador" id="recrutador-id" required/>
-    <textarea rows="4" placeholder="Comentário" id="mensagem" required></textarea>
-    <button type="button" id="enviar">ENVIAR AGORA</button>
-  </div>
-
-  <script src="./script.js"></script>
-</body>
+     
+    <script src="./script.js"></script>
+  </body>
 </html>

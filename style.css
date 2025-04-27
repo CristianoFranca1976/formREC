@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -38,7 +42,7 @@ body {
   background-color: #ffffff12;
   border: 1px solid #ffffff1e;
   width: 100%;
-  max-width: 500px;
+  max-width: 600px;
   padding: 40px;
   border-radius: 10px;
   backdrop-filter: blur(25px);
@@ -48,25 +52,12 @@ label {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-size: 1.5vh;
 }
-.formulario img {
-  width: 100%;
-  max-width: 150px;
-}
-.formulario h2 {
-  font-family: 'bold';
-  font-size: 20px;
-  color: #fff;
-  margin: 20px 0 0 0;
-}
-.formulario p {
-  font-family: 'light';
-  font-size: 15px;
-  color: #fff;
-  line-height: 1.5;
-  margin: 10px 0 20px 0;
-}
-.formulario input {
+.inp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: 'light';
   font-size: 15px;
   color: #fff;
@@ -74,7 +65,71 @@ label {
   padding: 25px;
   border-radius: 10px;
   background-color: #ffffff16;
-  margin: 0 0 10px 0;
+  transition: all 0.3s;
+  margin-bottom: 18px;
+}
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  width: 100%;
+  padding-top: 10PX;
+  color: greenyellow;
+}
+.formulario img {
+  max-width: 150px;
+}
+input[type="checkbox"], input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 25px;
+  height: 25px;
+  border: transparent;
+  border-radius: 6px;
+  background-color: #eeeeee8e;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Quando marcado */
+input[type="checkbox"]:checked, input[type="radio"]:checked {
+  background-color: transparent;
+}
+
+/* Tick centralizado */
+input[type="checkbox"]:checked::after, input[type="radio"]:checked::after {
+  content: "✔";
+  color: #3cfa02;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* esse é o truque */
+}
+.formulario h2 {
+  font-family: 'bold';
+  font-family: "Zen Dots", sans-serif;
+  font-size: 2vh;
+  color: #e0dcdc;
+  margin: 30px;
+}
+.formulario p {
+  font-family: "Bruno Ace SC", sans-serif;
+  font-size: 1.5vh;
+  color: #fff;
+  line-height: 1.5;
+  margin: 10px 0 20px 0;
+}
+.check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'light';
+  font-size: 15px;
+  color: #fff;
+  width: auto;
+  border-radius: 10px;
+  background-color: #ffffff16;
   transition: all 0.3s;
 }
 .formulario input::placeholder {
@@ -132,4 +187,22 @@ label {
 }
 .formulario button:hover {
   filter: brightness(110%);
+}
+.bot{
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  width: 100%;
+  padding: 10px;
+}
+span {
+  color: white;
+  font-family: "Shadows Into Light", cursive;
+  font-size: 20px;
+}
+.copyright {
+  
+  margin-right: 10px;
+  width: 25px;
+  height: 25px;
 }
