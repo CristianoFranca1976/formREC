@@ -52,7 +52,7 @@ function prepararDados (nome, telefone, mensagem, pontos, resultado, recrutador,
 
 :military_helmet: **QRA:** ${nome} | ${telefone}
 
-:clipboard: **Pontuação:**${pontos} pontos
+:clipboard: **Pontuação:** ${pontos} pontos
 
 :page_facing_up: **Resultado:** ${resultado}
 
