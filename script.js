@@ -69,7 +69,7 @@ ${link} :point_left: ***Envie outro aqui***
 }
 
 function enviarParaDiscord (dados, resultado) {
-    const url = 'https://discord.com/api/webhooks/1364291804807168190/5ro9OtD4C8xDShEXszLXtO5Ywd3mjlf82vhiHOc9gIIyekeuxH7AVEmHxVuiXcnqkbLD'
+    const url = 'https://form-rec-cristiano-f.vercel.app/api/sendWebhook'
     const config = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
